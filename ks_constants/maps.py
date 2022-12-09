@@ -26,7 +26,7 @@ class Map(Enum):
                     Developer.Luminous,
                     ["Base.SC2Data/GameData/Terrain/FourSeasons.xml"],
                     "maps/four_seasons.SC2Map",
-                    True,
+                    False,
                     None)
     Zerus_Volcanoes = (2,
                        {Language.English: 'Zerus Volcanoes', Language.Korean: '제루스 화산'},
@@ -74,7 +74,7 @@ class Map(Enum):
                      Developer.Understudy,
                      ["Base.SC2Data/GameData/Terrain/KaldirCliffs.xml"],
                      "maps/kaldir_cliffs.SC2Map",
-                     True,
+                     False,
                      None)
     Lost_Tides = (9,
                      {Language.English: 'Lost Tides', Language.Korean: '사라진 물의 흐름'},
@@ -82,7 +82,7 @@ class Map(Enum):
                      Developer.Templar,
                      ["Base.SC2Data/GameData/Terrain/LostTides.xml"],
                      "maps/lost_tides.SC2Map",
-                     False,
+                     True,
                      None)    
 
     # galaxy representation is the string value of the Preset in KS2 Galaxy
