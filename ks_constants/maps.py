@@ -11,6 +11,7 @@ class Map(Enum):
                ["Base.SC2Data/GameData/Terrain/Classic.xml"],
                "maps/classic.SC2Map",
                False,
+               False,
                None)
     Duck_Map = (1,
                 {Language.English: 'Duck Map', Language.Korean: '오리'},
@@ -18,6 +19,7 @@ class Map(Enum):
                 Developer.Duck,
                 ["Base.SC2Data/GameData/Terrain/DuckMap.xml"],
                 "maps/duck_map.SC2Map",
+                True,
                 True,
                 None)
     Zerus_Volcanoes = (2,
@@ -27,6 +29,7 @@ class Map(Enum):
                        ["Base.SC2Data/GameData/Terrain/ZerusVolcanoes.xml"],
                        "maps/zerus_volcanoes.SC2Map",
                        True,
+                       True,
                        None)
     Ruins_Of_Imladoon = (3,
                          {Language.English: 'Ruins of Imladoon', Language.Korean: '임라둔의 잔해'},
@@ -34,6 +37,7 @@ class Map(Enum):
                          Developer.Fatline,
                          ["Base.SC2Data/GameData/Terrain/RuinsOfImladoon.xml"],
                          "maps/ruins_of_imladoon.SC2Map",
+                         True,
                          True,
                          Developer.Templar)
     Four_Seasons = (4,
@@ -43,6 +47,7 @@ class Map(Enum):
                     ["Base.SC2Data/GameData/Terrain/FourSeasons.xml"],
                     "maps/four_seasons.SC2Map",
                     False,
+                    False,
                     None)
     Heart_Of_Amethyst = (5,
                          {Language.English: 'Heart of Amethyst', Language.Korean: '자수정의 심장'},
@@ -50,6 +55,7 @@ class Map(Enum):
                          Developer.Luminous,
                          ["Base.SC2Data/GameData/Terrain/HeartOfAmethyst.xml"],
                          "maps/heart_of_amethyst.SC2Map",
+                         False,
                          False,
                          None)
     Vintage_Shores = (6,
@@ -59,6 +65,7 @@ class Map(Enum):
                       ["Base.SC2Data/GameData/Terrain/VintageShores.xml"],
                       "maps/vintage_shores.SC2Map",
                       False,
+                      False,
                       None)
     Aiur_Fountains = (7,
                       {Language.English: 'Aiur Fountains', Language.Korean: '아이어 분수'},
@@ -66,6 +73,7 @@ class Map(Enum):
                       Developer.Luminous,
                       ["Base.SC2Data/GameData/Terrain/AiurFountains.xml"],
                       "maps/aiur_fountains.SC2Map",
+                      False,
                       False,
                       None)
     Kaldir_Cliffs = (8,
@@ -75,15 +83,17 @@ class Map(Enum):
                      ["Base.SC2Data/GameData/Terrain/KaldirCliffs.xml"],
                      "maps/kaldir_cliffs.SC2Map",
                      False,
+                     False,
                      None)
     Lost_Tides = (9,
-                     {Language.English: 'Lost Tides', Language.Korean: '사라진 물의 흐름'},
+                     {Language.English: 'Kaldir Cliffs', Language.Korean: '사라진 물의 흐름'},
                      "LOST_TIDES",
                      Developer.Templar,
                      ["Base.SC2Data/GameData/Terrain/LostTides.xml"],
                      "maps/lost_tides.SC2Map",
                      True,
-                     None)    
+                     True,
+                     None)
 
     # galaxy representation is the string value of the Preset in KS2 Galaxy
     def __init__(self,
@@ -93,7 +103,8 @@ class Map(Enum):
                  original_author: Developer,
                  custom_file_list: list[str],
                  file_path: str,
-                 is_active: bool = False,
+                 is_available: bool = False, # whether community has downvoted map
+                 is_active: bool = False, # whether the map is in the current pool
                  current_author: Developer = None):
         self._index = index
         self._name_dict = name_dict
@@ -102,6 +113,7 @@ class Map(Enum):
         self._file_path = file_path
         self._original_author = original_author
         self._current_author = original_author if current_author is None else current_author
+        self._is_available = is_available
         self._is_active = is_active
 
     @classmethod
@@ -128,6 +140,9 @@ class Map(Enum):
 
     def file_path(self):
         return self._file_path
+
+    def is_available(self):
+        return self._is_available
 
     def is_active(self):
         return self._is_active
