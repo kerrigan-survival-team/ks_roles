@@ -14,5 +14,3 @@ class Developer(Enum):
     Legacy = 9
     hex = 10
     geo = 11
-
-

@@ -5,7 +5,11 @@ from ks_constants.locale import Language
 
 class Map(Enum):
     Classic = (0,
-               {Language.English: 'Classic', Language.Korean: '기본'},
+               {
+                   Language.Chinese: '经典永存',
+                   Language.English: 'Classic',
+                   Language.Korean: '기본'
+               },
                "CLASSIC",
                Developer.Luminous,
                ["Base.SC2Data/GameData/Terrain/Classic.xml"],
@@ -14,7 +18,11 @@ class Map(Enum):
                False,
                None)
     Duck_Map = (1,
-                {Language.English: 'Duck Map', Language.Korean: '오리'},
+                {
+                    Language.Chinese: '鸭鸭',
+                    Language.English: 'Duck Map',
+                    Language.Korean: '오리'
+                },
                 "DUCK_MAP",
                 Developer.Duck,
                 ["Base.SC2Data/GameData/Terrain/DuckMap.xml"],
@@ -23,7 +31,11 @@ class Map(Enum):
                 True,
                 None)
     Zerus_Volcanoes = (2,
-                       {Language.English: 'Zerus Volcanoes', Language.Korean: '제루스 화산'},
+                       {
+                           Language.Chinese: '泽鲁斯火山',
+                           Language.English: 'Zerus Volcanoes',
+                           Language.Korean: '제루스 화산'
+                       },
                        "ZERUS_VOLCANOES",
                        Developer.Luminous,
                        ["Base.SC2Data/GameData/Terrain/ZerusVolcanoes.xml"],
@@ -32,7 +44,11 @@ class Map(Enum):
                        True,
                        None)
     Ruins_Of_Imladoon = (3,
-                         {Language.English: 'Ruins of Imladoon', Language.Korean: '임라둔의 잔해'},
+                         {
+                             Language.Chinese: '伊姆拉杜恩遗址',
+                             Language.English: 'Ruins of Imladoon',
+                             Language.Korean: '임라둔의 잔해'
+                         },
                          "RUINS_OF_IMLADOON",
                          Developer.Fatline,
                          ["Base.SC2Data/GameData/Terrain/RuinsOfImladoon.xml"],
@@ -41,7 +57,11 @@ class Map(Enum):
                          True,
                          Developer.Templar)
     Four_Seasons = (4,
-                    {Language.English: 'Four Seasons', Language.Korean: '사계절'},
+                    {
+                        Language.Chinese: '四季交叠',
+                        Language.English: 'Four Seasons',
+                        Language.Korean: '사계절'
+                    },
                     "FOUR_SEASONS",
                     Developer.Luminous,
                     ["Base.SC2Data/GameData/Terrain/FourSeasons.xml"],
@@ -50,7 +70,10 @@ class Map(Enum):
                     False,
                     None)
     Heart_Of_Amethyst = (5,
-                         {Language.English: 'Heart of Amethyst', Language.Korean: '자수정의 심장'},
+                         {
+                             Language.Chinese: '紫水晶之心',
+                             Language.English: 'Heart of Amethyst',
+                             Language.Korean: '자수정의 심장'},
                          "HEART_OF_AMETHYST",
                          Developer.Luminous,
                          ["Base.SC2Data/GameData/Terrain/HeartOfAmethyst.xml"],
@@ -59,7 +82,11 @@ class Map(Enum):
                          False,
                          None)
     Vintage_Shores = (6,
-                      {Language.English: 'Vintage Shores', Language.Korean: '빈티지 해변'},
+                      {
+                          Language.Chinese: '夏日海滩',
+                          Language.English: 'Vintage Shores',
+                          Language.Korean: '빈티지 해변'
+                      },
                       "VINTAGE_SHORES",
                       Developer.Templar,
                       ["Base.SC2Data/GameData/Terrain/VintageShores.xml"],
@@ -68,7 +95,11 @@ class Map(Enum):
                       False,
                       None)
     Aiur_Fountains = (7,
-                      {Language.English: 'Aiur Fountains', Language.Korean: '아이어 분수'},
+                      {
+                          Language.Chinese: '艾尔之泉',
+                          Language.English: 'Aiur Fountains',
+                          Language.Korean: '아이어 분수'
+                      },
                       "AIUR_FOUNTAINS",
                       Developer.Luminous,
                       ["Base.SC2Data/GameData/Terrain/AiurFountains.xml"],
@@ -77,7 +108,11 @@ class Map(Enum):
                       False,
                       None)
     Kaldir_Cliffs = (8,
-                     {Language.English: 'Kaldir Cliffs', Language.Korean: '칼디르 절벽'},
+                     {
+                         Language.Chinese: '冰封王座',
+                         Language.English: 'Kaldir Cliffs',
+                         Language.Korean: '칼디르 절벽'
+                     },
                      "KALDIR_CLIFFS",
                      Developer.Understudy,
                      ["Base.SC2Data/GameData/Terrain/KaldirCliffs.xml"],
@@ -86,7 +121,11 @@ class Map(Enum):
                      False,
                      None)
     Lost_Tides = (9,
-                     {Language.English: 'Lost Tides', Language.Korean: '잃어버린 강'},
+                     {
+                         Language.Chinese: '失意之汐',
+                         Language.English: 'Lost Tides',
+                         Language.Korean: '잃어버린 강'
+                     },
                      "LOST_TIDES",
                      Developer.Templar,
                      ["Base.SC2Data/GameData/Terrain/LostTides.xml"],
