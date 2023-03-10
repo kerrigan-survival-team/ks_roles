@@ -29,8 +29,8 @@ class Map(Enum):
                 Developer.Duck,
                 [os.path.join("Base.SC2Data", "GameData", "Terrain", "DuckMap.xml")],
                 os.path.join(KS2_MAPS_DIRECTORY, "duck_map.SC2Map"),
-                True,
-                True,
+                False,
+                False,
                 None)
     Zerus_Volcanoes = (2,
                        {
@@ -42,8 +42,8 @@ class Map(Enum):
                        Developer.Luminous,
                        [os.path.join("Base.SC2Data", "GameData", "Terrain", "ZerusVolcanoes.xml")],
                        os.path.join(KS2_MAPS_DIRECTORY, "zerus_volcanoes.SC2Map"),
-                       True,
-                       True,
+                       False,
+                       False,
                        None)
     Ruins_Of_Imladoon = (3,
                          {
@@ -55,8 +55,8 @@ class Map(Enum):
                          Developer.Fatline,
                          [os.path.join("Base.SC2Data", "GameData", "Terrain", "RuinsOfImladoon.xml")],
                          os.path.join(KS2_MAPS_DIRECTORY, "ruins_of_imladoon.SC2Map"),
-                         True,
-                         True,
+                         False,
+                         False,
                          Developer.Templar)
     Four_Seasons = (4,
                     {
@@ -68,8 +68,8 @@ class Map(Enum):
                     Developer.Luminous,
                     [os.path.join("Base.SC2Data", "GameData", "Terrain", "FourSeasons.xml")],
                     os.path.join(KS2_MAPS_DIRECTORY, "four_seasons.SC2Map"),
-                    False,
-                    False,
+                    True,
+                    True,
                     None)
     Heart_Of_Amethyst = (5,
                          {
@@ -106,8 +106,8 @@ class Map(Enum):
                       Developer.Luminous,
                       [os.path.join("Base.SC2Data", "GameData", "Terrain", "AiurFountains.xml")],
                       os.path.join(KS2_MAPS_DIRECTORY, "aiur_fountains.SC2Map"),
-                      False,
-                      False,
+                      True,
+                      True,
                       None)
     Kaldir_Cliffs = (8,
                      {
@@ -135,6 +135,19 @@ class Map(Enum):
                      True,
                      True,
                      None)
+    Death_Valley = (10,
+                     {
+                         Language.Chinese: '死亡峡谷',
+                         Language.English: 'Death Valley',
+                         Language.Korean: '죽음의 골짜기'
+                     },
+                     "DEATH_VALLEY",
+                     Developer.Fatline,
+                     [os.path.join("Base.SC2Data", "GameData", "Terrain", "DeathValley.xml")],
+                     os.path.join(KS2_MAPS_DIRECTORY, "death_valley.SC2Map"),
+                     True,
+                     True,
+                     None)                     
 
     # galaxy representation is the string value of the Preset in KS2 Galaxy
     def __init__(self,
