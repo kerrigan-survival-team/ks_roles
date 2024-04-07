@@ -3,6 +3,7 @@ from .locale import Language
 
 class Region(Enum):
     North_America = (
+        1,
         {
             Language.Chinese: '北美',
             Language.English: 'NA',
@@ -11,6 +12,7 @@ class Region(Enum):
         "US"
     )
     Europe = (
+        2,
         {
             Language.Chinese: '欧洲',
             Language.English: 'EU',
@@ -19,6 +21,7 @@ class Region(Enum):
         "EU"
     )
     Korea = (
+        3,
         {
             Language.Chinese: '韩国',
             Language.English: 'KR',
@@ -27,6 +30,7 @@ class Region(Enum):
         "KR"
     )
     China = (
+        5,
         {
             Language.Chinese: '中国',
             Language.English: 'CN',
@@ -36,12 +40,16 @@ class Region(Enum):
     )
 
     # auth_code is the name of the region on the SC2Editor publish screen for authenticating into the region
-    def __init__(self, codes, auth_code: str):
+    def __init__(self, region_id: int, codes: dict[Language, str], auth_code: str):
+        self._region_id = region_id
         self._codes = codes
         self._auth_code = auth_code
 
     def get_code(self, locale: Language):
         return self._codes[locale]
+    
+    def get_region_id(self):
+        return self._region_id
 
     def get_auth_code(self):
         return self._auth_code
