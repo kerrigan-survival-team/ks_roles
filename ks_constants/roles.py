@@ -21,6 +21,11 @@ class Team(Enum):
 
     @classmethod
     def from_index(cls, index):
+        if not isinstance(index, int):
+            try:
+                index = int(index)
+            except ValueError:
+                print(f'Index provided is not an integer: {index}')
         return Team.Survivor if index == 0 else Team.Kerrigan
 
 
@@ -105,6 +110,11 @@ class Role(Enum):
 
     @classmethod
     def from_index(cls, index):
+        if not isinstance(index, int):
+            try:
+                index = int(index)
+            except ValueError:
+                print(f'Index provided is not an integer: {index}')
         return _roles_list[index]
 
     @classmethod

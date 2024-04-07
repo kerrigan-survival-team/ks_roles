@@ -232,7 +232,7 @@ class Map(Enum):
     # galaxy representation is the string value of the Preset in KS2 Galaxy
     def __init__(self,
                  index: int,
-                 name_dict: dict,
+                 name_dict: dict[Language, str],
                  galaxy_representation: str,
                  original_author: Developer,
                  custom_file_list: list[str],
