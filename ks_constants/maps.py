@@ -236,7 +236,7 @@ class Map(Enum):
                      },
                      "LAST_SANCTUARY",
                      None,
-                     [],
+                     [os.path.join("Base.SC2Data", "GameData", "Terrain", "LastSanctuary.xml")],
                      os.path.join(KS2_MAPS_DIRECTORY, "last_sanctuary.SC2Map"),
                      True,
                      True,
