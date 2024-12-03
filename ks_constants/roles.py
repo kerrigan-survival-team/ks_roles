@@ -92,6 +92,7 @@ class Role(Enum):
     Nightingale = (43, RoleType.Support, {Language.English: 'Nightingale'}, Developer.Luminous, None, True)
     Sjlerk = (44, RoleType.Support, {Language.English :'Sjlerk'}, Developer.Korneel, None, True)
     Sophia = (45, RoleType.Builder, {Language.English :'Sophia'}, Developer.Korneel, None, True)
+    Jinara = (46, RoleType.Builder, {Language.English :'Jinara'}, Developer.Fern, None, True)
 
     def __init__(self,
                  _id: int,
